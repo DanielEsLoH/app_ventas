@@ -4,33 +4,33 @@
       <%= error %>
     </div>
   <% end %>
+
   <br>
   
   <div>
-    <%= form.label :title %>
-    <br>
+    <%= form.label :title %><br>
     <%= form.text_field :title %>
-  </div>
+  </div> <br>
 
   <div>
-    <%= form.label :description %>
-    <br>
+    <%= form.label :description %><br>
     <%= form.text_area :description %>
-  </div>
+  </div> <br>
 
   <div>
-    <%= form.label :price %>
-    <br>
+    <%= form.label :price %><br>
     <%= form.number_field :price %>
-  </div>
-  <br>
+  </div> <br>
 
   <div>
-    <%= form.label :photo %>
-    <br>
+    <%= form.label :category_id %> <br>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+  </div> <br>
+
+  <div>
+    <%= form.label :photo %><br>
     <%= form.file_field :photo %>
-  </div>
-  <br>
+  </div><br>
 
   <%= form.submit %>
 

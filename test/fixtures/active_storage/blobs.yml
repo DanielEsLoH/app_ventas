@@ -1,0 +1,3 @@
+ps4_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "ps4.jpg", service_name: "test_fixtures" %>
+switch_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "switch.jpg", service_name: "test_fixtures" %>
+air_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "macbook.jpg", service_name: "test_fixtures" %>

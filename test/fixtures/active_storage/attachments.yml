@@ -1,0 +1,14 @@
+ps4_picture:
+  name: photo
+  record: ps4 (Product)
+  blob: ps4_picture_blob
+
+switch_picture:
+  name: photo
+  record: switch (Product)
+  blob: switch_picture_blob
+
+air_picture:
+  name: photo
+  record: air (Product)
+  blob: air_picture_blob 
