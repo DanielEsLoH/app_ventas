@@ -4,22 +4,20 @@ en:
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+      category:
+        name: 'Name'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
@@ -27,7 +25,9 @@ en:
   shared:
     header:
       add: 'Add product'
-      categories: 'Categories'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
   authentication:
     users:
       create:
@@ -36,6 +36,8 @@ en:
       create:
         created: 'Welcome!'
         failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       title: 'Edit product'
@@ -44,8 +46,8 @@ en:
     index:
       title: 'Products:'
       all: 'All'
-      min_price: 'minimal price'
-      max_price: 'Maximum price'
+      min_price: 'Min price'
+      max_price: 'Max price'
       query_text: 'What do you want to search?'
       expensive: 'Expensive first'
       cheapest: 'Cheaper first'
@@ -59,7 +61,7 @@ en:
       updated: 'Your product has been successfully updated'
     destroy:
       destroyed: 'Your product has been successfully destroyed'
-      categories:
+  categories:
     category:
       edit: 'Edit'
       delete: 'Delete'

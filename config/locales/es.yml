@@ -4,22 +4,20 @@ es:
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacía'
-            price:
-              blank: 'no puede estar vacío'
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
@@ -27,7 +25,9 @@ es:
   shared:
     header:
       add: 'Añadir producto'
-      categories: 'Categorías'
+      login: 'Acceso'
+      register: 'Registro'
+      logout: 'Salir'
   authentication:
     users:
       create:
@@ -36,6 +36,8 @@ es:
       create:
         created: 'Bienvenido!'
         failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
     edit:
       title: 'Editar producto'
@@ -44,11 +46,11 @@ es:
     index:
       title: 'Productos:'
       all: 'Todos'
-      min_price: 'Precio Mínimo'
-      max_price: 'Precio Máximo'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
       query_text: '¿Qué quieres buscar?'
       expensive: 'Más caros'
-      cheapest: 'Más baratos'
+      cheapest: 'Más barato'
       newest: 'Añadidos recientemente'
     show:
       edit: 'Editar producto'
