@@ -27,6 +27,14 @@ en:
     header:
       add: 'Add product'
       categories: 'Categories'
+  authentication:
+    users:
+      create:
+        crated: 'Your account has been created!'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
   products:
     edit:
       title: 'Edit product'
