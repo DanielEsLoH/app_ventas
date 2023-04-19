@@ -13,7 +13,7 @@
 
 	<%= link_to t('.all'), products_path %> ||
 
-	<%= render partial: 'category', collection: @categories %>
+	<%= render partial: 'category', collection: @categories %> <br>
 
   <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
 	  <%= render partial: 'product', collection: @products %>
