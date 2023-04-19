@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 15 }, format: { with: /\A[a-z0-9A-Z]+\z/, message: :invalid }
   validates :password, length: { minimum: 6 }
   has_many :products, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   before_save :downcase_attributes
 
   private
