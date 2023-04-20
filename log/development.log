@@ -34330,3 +34330,1581 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 179)
 
 
+Started GET "/" for ::1 at 2023-04-20 15:02:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.5ms | Allocations: 955)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 3.4ms | Allocations: 2291)
+  Rendered products/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 10996)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 177)
+  Rendered shared/_header.html.erb (Duration: 1.3ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 157.4ms | Allocations: 47012)
+Completed 200 OK in 300ms (Views: 158.3ms | ActiveRecord: 22.3ms | Allocations: 163751)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71/switch.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8/macbook.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71", "filename"=>"switch"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8", "filename"=>"macbook"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 510621269], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: ZeYDs9JcFU6bAUk7azwxPwci (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0d6d12276e6fc3214f0708cabba6a107ee3d5551/macbook.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0d6d12276e6fc3214f0708cabba6a107ee3d5551/macbook.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 4666)
+
+
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: bXMafoLJ3o91HvRSvyR2bbsk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjA6MDc6NDUuNDUxWiIsInB1ciI6ImJsb2Jfa2V5In19--22cda055b28cc698e0fa205c62240011cc513fb5/switch.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjA6MDc6NDUuNDUxWiIsInB1ciI6ImJsb2Jfa2V5In19--22cda055b28cc698e0fa205c62240011cc513fb5/switch.jpg
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 6501)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ0N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0d6d12276e6fc3214f0708cabba6a107ee3d5551/macbook.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjA6MDc6NDUuNDUxWiIsInB1ciI6ImJsb2Jfa2V5In19--22cda055b28cc698e0fa205c62240011cc513fb5/switch.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d9d5890fa41cb0c3803426fce0db43e6d59b6702/ps4.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d9d5890fa41cb0c3803426fce0db43e6d59b6702/ps4.jpg
+Completed 302 Found in 25ms (ActiveRecord: 10.5ms | Allocations: 14269)
+
+
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 2107)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIwOjA3OjQ1LjQ2NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d9d5890fa41cb0c3803426fce0db43e6d59b6702/ps4.jpg" for ::1 at 2023-04-20 15:02:45 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/favorites" for ::1 at 2023-04-20 15:02:59 -0500
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 375)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 438)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3416)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 5380)
+
+
+Started GET "/?favorites=true" for ::1 at 2023-04-20 15:02:59 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"favorites"=>"true"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "favorites" ON "favorites"."product_id" = "products"."id" WHERE "favorites"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 280205884], ["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2)[0m  [["id", 204900167], ["id", 111535720]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering products/index.html.erb within layouts/turbo_rails/frame
+  [1m[36mASYNC Category Load (0.0ms) (db time 1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.6ms | Allocations: 674)
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 0.7ms | Allocations: 588)
+  Rendered products/index.html.erb within layouts/turbo_rails/frame (Duration: 3.1ms | Allocations: 4584)
+  Rendered layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb (Duration: 3.8ms | Allocations: 4870)
+Completed 200 OK in 30ms (Views: 3.3ms | ActiveRecord: 7.5ms | Allocations: 16492)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:11:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.0ms | Allocations: 955)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 2.4ms | Allocations: 2293)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 11000)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 177)
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 1222)
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 48090)
+Completed 200 OK in 168ms (Views: 94.9ms | ActiveRecord: 11.1ms | Allocations: 144460)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8/macbook.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71/switch.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8", "filename"=>"macbook"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 510621269], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71", "filename"=>"switch"}
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: ZeYDs9JcFU6bAUk7azwxPwci (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8eaf1afdc09c1e7aa6061e50da893d3fa88c3d23/macbook.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8eaf1afdc09c1e7aa6061e50da893d3fa88c3d23/macbook.jpg
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1dee49749243062246baa6b16b3609a21e6cab8c/ps4.jpg)[0m
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 5550)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1dee49749243062246baa6b16b3609a21e6cab8c/ps4.jpg
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms | Allocations: 7159)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8eaf1afdc09c1e7aa6061e50da893d3fa88c3d23/macbook.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjE2OjE5Ljc1NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1dee49749243062246baa6b16b3609a21e6cab8c/ps4.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: bXMafoLJ3o91HvRSvyR2bbsk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MTY6MTkuNzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--689f1a5c93fe14b44d614d640d09ec3efdbbc8fe/switch.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MTY6MTkuNzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--689f1a5c93fe14b44d614d640d09ec3efdbbc8fe/switch.jpg
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms | Allocations: 7398)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 729)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 488)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MTY6MTkuNzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--689f1a5c93fe14b44d614d640d09ec3efdbbc8fe/switch.jpg" for ::1 at 2023-04-20 18:11:19 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:18:51 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.8ms | Allocations: 840)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.9ms | Allocations: 2159)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 8115)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 622)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 23303)
+Completed 200 OK in 47ms (Views: 14.4ms | ActiveRecord: 4.3ms | Allocations: 63106)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8/macbook.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71/switch.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8", "filename"=>"macbook"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--768634fe6f9abe0a39f9fdc64f442c6a439f1de1/ps4.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 510621269], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--768634fe6f9abe0a39f9fdc64f442c6a439f1de1/ps4.jpg
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: ZeYDs9JcFU6bAUk7azwxPwci (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--13dd0209ce0af40052759eebd5c468a1add9c9d4/macbook.jpg)[0m
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 4127)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--13dd0209ce0af40052759eebd5c468a1add9c9d4/macbook.jpg
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms | Allocations: 4421)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71", "filename"=>"switch"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: bXMafoLJ3o91HvRSvyR2bbsk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MjM6NTEuOTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--18a4dd372109e365a8547e2f6b41ac0036787c92/switch.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MjM6NTEuOTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--18a4dd372109e365a8547e2f6b41ac0036787c92/switch.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1735)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--13dd0209ce0af40052759eebd5c468a1add9c9d4/macbook.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--768634fe6f9abe0a39f9fdc64f442c6a439f1de1/ps4.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MjM6NTEuOTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--18a4dd372109e365a8547e2f6b41ac0036787c92/switch.jpg" for ::1 at 2023-04-20 18:18:51 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:18:52 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.0ms | Allocations: 674)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.3ms | Allocations: 1464)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6550)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 9854)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 1.6ms | Allocations: 15479)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--768634fe6f9abe0a39f9fdc64f442c6a439f1de1/ps4.jpg" for ::1 at 2023-04-20 18:18:52 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MjM6NTEuOTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--18a4dd372109e365a8547e2f6b41ac0036787c92/switch.jpg" for ::1 at 2023-04-20 18:18:52 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjIzOjUxLjk4M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--13dd0209ce0af40052759eebd5c468a1add9c9d4/macbook.jpg" for ::1 at 2023-04-20 18:18:52 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/login" for ::1 at 2023-04-20 18:18:56 -0500
+Processing by Authentication::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authentication/sessions/new.html.erb within layouts/application
+  Rendered authentication/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3493)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 40)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 6272)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 7613)
+
+
+Started POST "/login" for ::1 at 2023-04-20 18:19:03 -0500
+Processing by Authentication::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"paco@vendelo.com", "password"=>"[FILTERED]", "commit"=>"Guardar "}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/authentication/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms | Allocations: 20013)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:19:03 -0500
+Processing by ProductsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.6ms | Allocations: 674)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.1ms | Allocations: 1447)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 5570)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 456)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 8561)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 13959)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:19:06 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (1.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/show.html.erb within layouts/application (Duration: 35.4ms | Allocations: 27354)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 30354)
+Completed 200 OK in 44ms (Views: 36.3ms | ActiveRecord: 5.3ms | Allocations: 32599)
+
+
+Started GET "/favorites" for ::1 at 2023-04-20 18:19:10 -0500
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 374)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 438)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3410)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 5337)
+
+
+Started GET "/?favorites=true" for ::1 at 2023-04-20 18:19:10 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"favorites"=>"true"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "favorites" ON "favorites"."product_id" = "products"."id" WHERE "favorites"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 280205884], ["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2)[0m  [["id", 204900167], ["id", 111535720]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering products/index.html.erb within layouts/turbo_rails/frame
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.5ms | Allocations: 674)
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 0.5ms | Allocations: 588)
+  Rendered products/index.html.erb within layouts/turbo_rails/frame (Duration: 2.5ms | Allocations: 4660)
+  Rendered layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb (Duration: 3.0ms | Allocations: 4946)
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 1.6ms | Allocations: 12302)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:21:02 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.6ms | Allocations: 689)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.6ms | Allocations: 1970)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 7219)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 429)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 21529)
+Completed 200 OK in 43ms (Views: 11.8ms | ActiveRecord: 8.4ms | Allocations: 62841)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:21:05 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/show.html.erb within layouts/application (Duration: 12.9ms | Allocations: 12206)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 15222)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 2.2ms | Allocations: 17592)
+
+
+Started GET "/user/pepito" for ::1 at 2023-04-20 18:21:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"pepito"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pepito"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 318)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3369)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 5968)
+
+
+Started GET "/?user_id=377526890" for ::1 at 2023-04-20 18:21:07 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"377526890"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 377526890], ["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 1029727388], ["record_id", 954308001], ["record_id", 668017202], ["record_id", 1029453414], ["record_id", 871135750], ["record_id", 455204334], ["record_id", 475308017], ["record_id", 337674301]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2)[0m  [["id", 204900167], ["id", 111535720]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering products/index.html.erb within layouts/turbo_rails/frame
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.7ms | Allocations: 664)
+  Rendered collection of products/_product.html.erb [10 times] (Duration: 1.2ms | Allocations: 1130)
+  Rendered products/index.html.erb within layouts/turbo_rails/frame (Duration: 4.3ms | Allocations: 5133)
+  Rendered layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb (Duration: 4.5ms | Allocations: 5224)
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 9879)
+
+
+Started GET "/?page=2" for ::1 at 2023-04-20 18:21:16 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 12]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 388031213], ["record_id", 1029453414], ["record_id", 762146111], ["record_id", 586003644], ["record_id", 871135750], ["record_id", 660871606], ["record_id", 455204334], ["record_id", 257897767], ["record_id", 925665542], ["record_id", 475308017], ["record_id", 1068639267], ["record_id", 858564046], ["record_id", 337674301]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering products/index.html.erb within layouts/turbo_rails/frame
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.2ms | Allocations: 661)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 0.6ms | Allocations: 861)
+  Rendered products/index.html.erb within layouts/turbo_rails/frame (Duration: 3.8ms | Allocations: 4932)
+  Rendered layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb (Duration: 3.9ms | Allocations: 5022)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 8517)
+
+
+Started GET "/545190839" for ::1 at 2023-04-20 18:21:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"545190839"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 545190839], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 545190839], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1038477724], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 545190839], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2592)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered shared/_header.html.erb (Duration: 1.1ms | Allocations: 390)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5414)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 2.1ms | Allocations: 6915)
+
+
+Started GET "/user/maria23" for ::1 at 2023-04-20 18:21:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"maria23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "maria23"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 102)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 384)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2847)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 4349)
+
+
+Started GET "/?user_id=1038477724" for ::1 at 2023-04-20 18:21:29 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"1038477724"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1038477724], ["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 255350244], ["record_id", 852787380], ["record_id", 586003644], ["record_id", 257897767], ["record_id", 925665542], ["record_id", 858564046]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering products/index.html.erb within layouts/turbo_rails/frame
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.5ms | Allocations: 661)
+  Rendered collection of products/_product.html.erb [8 times] (Duration: 0.6ms | Allocations: 575)
+  Rendered products/index.html.erb within layouts/turbo_rails/frame (Duration: 2.5ms | Allocations: 4546)
+  Rendered layout /home/danieles/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-1.4.0/app/views/layouts/turbo_rails/frame.html.erb (Duration: 2.6ms | Allocations: 4633)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 8015)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:27:43 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.2ms | Allocations: 840)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.8ms | Allocations: 2157)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 8108)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 698)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 23343)
+Completed 200 OK in 45ms (Views: 14.0ms | ActiveRecord: 4.4ms | Allocations: 69394)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71/switch.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8/macbook.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg)[0m
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 3278)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71", "filename"=>"switch"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: bXMafoLJ3o91HvRSvyR2bbsk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MzI6NDMuNzE5WiIsInB1ciI6ImJsb2Jfa2V5In19--4338bc679e8906c0c0c80317f59862a9e418979d/switch.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MzI6NDMuNzE5WiIsInB1ciI6ImJsb2Jfa2V5In19--4338bc679e8906c0c0c80317f59862a9e418979d/switch.jpg
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 2261)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8", "filename"=>"macbook"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 510621269], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: ZeYDs9JcFU6bAUk7azwxPwci (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0cb25042eecc7305b31fa2d9e062ee081db71a07/macbook.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0cb25042eecc7305b31fa2d9e062ee081db71a07/macbook.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1619)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6MzI6NDMuNzE5WiIsInB1ciI6ImJsb2Jfa2V5In19--4338bc679e8906c0c0c80317f59862a9e418979d/switch.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0cb25042eecc7305b31fa2d9e062ee081db71a07/macbook.jpg" for ::1 at 2023-04-20 18:27:43 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:27:46 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 7.3ms | Allocations: 7361)
+  Rendered products/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 12784)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 15776)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 1.4ms | Allocations: 18199)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:55 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 2.2ms | Allocations: 1072)
+  Rendered products/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4490)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 685)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8266)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.8ms | Allocations: 10676)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:55 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:55 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.8ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3605)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 6421)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 7986)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:55 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.9ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 6420)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 1.1ms | Allocations: 7912)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.1ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6435)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 7939)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.9ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6435)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.9ms | Allocations: 7946)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.8ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 6420)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 7915)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.6ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6420)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 7919)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:56 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.5ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6429)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.9ms | Allocations: 7925)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:57 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:29:57 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.0ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6426)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 7927)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjMyOjQzLjcxN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f16d3c56a507d7257a63f5230ff706f1e57fd90a/ps4.jpg" for ::1 at 2023-04-20 18:29:57 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:20 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 5.5ms | Allocations: 7452)
+  Rendered products/show.html.erb within layouts/application (Duration: 21.2ms | Allocations: 31197)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 45575)
+Completed 200 OK in 44ms (Views: 24.6ms | ActiveRecord: 8.1ms | Allocations: 63869)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 18:33:20 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2548)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg" for ::1 at 2023-04-20 18:33:20 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:20 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.8ms | Allocations: 890)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3827)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 6777)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 8435)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg" for ::1 at 2023-04-20 18:33:20 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.1ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6420)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.8ms | Allocations: 7924)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg" for ::1 at 2023-04-20 18:33:22 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:22 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 2.6ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6420)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.9ms | Allocations: 7933)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg" for ::1 at 2023-04-20 18:33:22 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:23 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.0ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6420)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 7921)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjM4OjIwLjI4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8cb2caf0e259e2d1b9cccf6a8dfc8441dd0e6067/ps4.jpg" for ::1 at 2023-04-20 18:33:23 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started DELETE "/favorites/236351428" for ::1 at 2023-04-20 18:33:24 -0500
+Processing by FavoritesController#destroy as TURBO_STREAM
+  Parameters: {"product_id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:27:in `product'
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+  [1m[36mFavorite Destroy (0.8ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 9]]
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+Redirected to http://localhost:3000/236351428
+Completed 303 See Other in 6ms (ActiveRecord: 1.5ms | Allocations: 4304)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:24 -0500
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 0.8ms | Allocations: 888)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3767)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6727)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 8336)
+
+
+Started POST "/favorites" for ::1 at 2023-04-20 18:33:25 -0500
+Processing by FavoritesController#create as TURBO_STREAM
+  Parameters: {"product_id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:27:in `product'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mFavorite Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 280205884], ["product_id", 236351428], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mFavorite Create (6.6ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 280205884], ["product_id", 236351428], ["created_at", "2023-04-20 23:33:25.169529"], ["updated_at", "2023-04-20 23:33:25.169529"]]
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+Redirected to http://localhost:3000/236351428
+Completed 302 Found in 13ms (ActiveRecord: 7.3ms | Allocations: 6142)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:33:25 -0500
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.8ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3607)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6438)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.6ms | Allocations: 7953)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:08 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 4.7ms | Allocations: 7433)
+  Rendered products/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 30868)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 693)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 46093)
+Completed 200 OK in 45ms (Views: 27.8ms | ActiveRecord: 3.4ms | Allocations: 67115)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWVITmd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6e1df8a7e9ed425fdcaad86aa011f4043622694", "filename"=>"ps4"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: yMfTeqHX795KXxYD1KceivcL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2548)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.8ms | Allocations: 890)
+  Rendered products/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3827)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 6777)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 1.5ms | Allocations: 8447)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.9ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6420)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.1ms | Allocations: 7921)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 3.6ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 6420)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 2.6ms | Allocations: 7927)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.8ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6420)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 1.1ms | Allocations: 7909)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:09 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/236351428" for ::1 at 2023-04-20 18:41:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.2ms | Allocations: 876)
+  Rendered products/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 6420)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 1.5ms | Allocations: 7924)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:10 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started DELETE "/favorites/236351428" for ::1 at 2023-04-20 18:41:11 -0500
+  
+SyntaxError (/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+...ts/favorite", locals { product: product })
+...                              ^
+/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+...ts/favorite", locals { product: product })
+...                              ^
+/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 1.1ms | Allocations: 838)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.4ms | Allocations: 1661)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 9354)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 409)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 12321)
+Completed 200 OK in 22ms (Views: 9.0ms | ActiveRecord: 3.5ms | Allocations: 21535)
+
+
+Started GET "/" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  ↳ app/controllers/products_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mASYNC Category Load (0.0ms) (db time 1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.5ms | Allocations: 661)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 1.1ms | Allocations: 1423)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 5662)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 392)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 9930)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 1.8ms | Allocations: 15639)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71/switch.jpg" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2ptcFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--91900618d2f7de171d26b87864239027d49eba71", "filename"=>"switch"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: bXMafoLJ3o91HvRSvyR2bbsk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6NDY6MjIuNDQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--2e92891666f0a5a197d34b86ec90072156c49b8c/switch.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6NDY6MjIuNDQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--2e92891666f0a5a197d34b86ec90072156c49b8c/switch.jpg
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1420)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8/macbook.jpg" for ::1 at 2023-04-20 18:41:22 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRlVTFtVkdWeFNGZzNPVFZMV0hoWlJERkxZMlZwZG1OTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljSE0wTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSE0wTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2RW5SbGMzUmZabWw0ZEhWeVpYTT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjA5LjAwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5245a5e1775f157f91101ce458a00f514f40a98b/ps4.jpg" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRlYyYng0PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d6ac2d9d8b75de54bf036ba44b6c5943fe2a00e8", "filename"=>"macbook"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 510621269], ["LIMIT", 1]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"ps4"}
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: ZeYDs9JcFU6bAUk7azwxPwci (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjIyLjQ1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3d90b5e0adebe230e22c5da97e83ffb253acd9f1/macbook.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjIyLjQ1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3d90b5e0adebe230e22c5da97e83ffb253acd9f1/macbook.jpg
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 1890)
+
+
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 494)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6NDY6MjIuNDQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--2e92891666f0a5a197d34b86ec90072156c49b8c/switch.jpg" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRXbVZaUkhNNVNtTkdWVFppUVZWck4yRjZkM2hRZDJOcEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGliV0ZqWW05dmF5NXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjIxaFkySnZiMnN1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9TZEdWemRGOW1hWGgwZFhKbGN3PT0iLCJleHAiOiIyMDIzLTA0LTIwVDIzOjQ2OjIyLjQ1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3d90b5e0adebe230e22c5da97e83ffb253acd9f1/macbook.jpg" for ::1 at 2023-04-20 18:41:22 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"macbook"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/803818265" for ::1 at 2023-04-20 18:41:23 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"803818265"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 803818265], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 3.2ms | Allocations: 887)
+  Rendered products/show.html.erb within layouts/application (Duration: 19.5ms | Allocations: 3644)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 6475)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 1.5ms | Allocations: 7984)
+
+
+Started DELETE "/favorites/803818265" for ::1 at 2023-04-20 18:41:24 -0500
+  
+SyntaxError (/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+...ts/favorite", locals { product: product })
+...                              ^
+/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+...ts/favorite", locals { product: product })
+...                              ^
+/home/danieles/Code/app_ventas/app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/favorites_controller.rb:13: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/favorites_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/803818265" for ::1 at 2023-04-20 18:44:06 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"803818265"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 803818265], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 111535720], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 377526890], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:11
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 6.5ms | Allocations: 7456)
+  Rendered products/show.html.erb within layouts/application (Duration: 26.3ms | Allocations: 31209)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 45602)
+Completed 200 OK in 57ms (Views: 29.1ms | ActiveRecord: 10.0ms | Allocations: 64185)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWRZbGhOWVdadlRFb3piemt4U0haU1UzWjVVakppWW5OckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljM2RwZEdOb0xtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYzNkcGRHTm9MbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZFblJsYzNSZlptbDRkSFZ5WlhNPSIsImV4cCI6IjIwMjMtMDQtMjBUMjM6NDY6MjIuNDQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--2e92891666f0a5a197d34b86ec90072156c49b8c/switch.jpg" for ::1 at 2023-04-20 18:44:06 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"switch"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 522)
+
+
+Started DELETE "/favorites/803818265" for ::1 at 2023-04-20 18:44:08 -0500
+Processing by FavoritesController#destroy as TURBO_STREAM
+  Parameters: {"product_id"=>"803818265"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:33:in `product'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+  [1m[36mFavorite Destroy (0.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 2]]
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/concerns/favoritable.rb:12:in `unfavorite!'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 2.0ms | Allocations: 997)
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 6539)
+
+
+Started POST "/favorites" for ::1 at 2023-04-20 18:44:09 -0500
+Processing by FavoritesController#create as TURBO_STREAM
+  Parameters: {"product_id"=>"803818265"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authentication.rb:11:in `set_current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:33:in `product'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 280205884], ["product_id", 803818265], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mFavorite Create (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 280205884], ["product_id", 803818265], ["created_at", "2023-04-20 23:44:09.392914"], ["updated_at", "2023-04-20 23:44:09.392914"]]
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/concerns/favoritable.rb:8:in `favorite!'
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  ↳ app/models/concerns/favoritable.rb:16:in `favorite'
+  Rendered products/_favorite.html.erb (Duration: 1.1ms | Allocations: 777)
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 6.4ms | Allocations: 6172)
+
+
