@@ -31,6 +31,8 @@ en:
       register: 'Register'
       logout: 'Logout'
       favorites: 'My favorites'
+      categories: 'Categories'
+      logout: 'Logout'
   authentication:
     users:
       create:
