@@ -1,6 +1,6 @@
 es:
-  app_name: 'Vendelo'
-  meta_title: 'Compra y vende productos de segunda mano'
+  app_name: 'TuVenta'
+  meta_title: 'Compra y venta de productos nuevos y de segunda mano'
   activerecord:
     models:
       product: Producto
@@ -25,7 +25,7 @@ es:
     not_authorized: 'No tienes permisos para esta acción'
     not_found: 'No se ha encontrado'
   shared:
-    header:
+    items:
       add: 'Añadir producto'
       login: 'Acceso'
       register: 'Registro'
@@ -48,6 +48,12 @@ es:
       title: 'Editar producto'
     new:
       title: 'Añadir producto'
+    form:
+      title_placeholder: '¿Qué quieres vender?'
+      description_placeholder: '¿Puedes describir el producto?'
+      price_placeholder: '¿Cuánto cuesta?'
+      category_placeholder: '¿En qué categoría encaja mejor?'
+      submit: 'Véndelo!'
     index:
       title: 'Productos:'
       all: 'Todos'

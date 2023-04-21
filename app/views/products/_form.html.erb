@@ -4,34 +4,21 @@
       <%= error %>
     </div>
   <% end %>
-
-  <br>
-  
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div> <br>
-
+    <%= form.text_field :title, placeholder: t(".title_placeholder"), class: "rounded-2xl border-gray-200 mb-4 w-full" %>
+  </div>
   <div>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </div> <br>
-
+    <%= form.text_area :description, placeholder: t(".description_placeholder"), class: "rounded-2xl border-gray-200 mb-4 w-full", rows: 5 %>
+  </div>
   <div>
-    <%= form.label :price %><br>
-    <%= form.number_field :price %>
-  </div> <br>
-
+    <%= form.number_field :price, placeholder: t(".price_placeholder"), class: "rounded-2xl border-gray-200 mb-4 w-full" %>
+  </div>
   <div>
-    <%= form.label :category_id %> <br>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
-  </div> <br>
-
-  <div>
-    <%= form.label :photo %><br>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, { prompt: t(".category_placeholder") }, { class: "rounded-2xl border-gray-200 mb-4 w-full text-gray-500"} %>
+  </div>
+  <div class="rounded-2xl border-gray-200 mb-4 w-full border-[1px] p-2 text-gray-500">
+    <%= form.label :photo %>
     <%= form.file_field :photo %>
-  </div><br>
-
-  <%= form.submit %>
-
+  </div>
+  <%= form.submit t('.submit'), class: "px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-2xl cursor-pointer shadow-sm" %>
 <% end %>
