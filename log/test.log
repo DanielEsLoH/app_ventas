@@ -28431,3 +28431,785 @@ Redirected to http://www.example.com/
 Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 1931)
   [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: 3iZAEQ6rDCRvWLwfnRtpqAHJ (checksum: L591gQFeisAkzd+lxZc2tw==)[0m
+[36m  Disk Storage (0.2ms) [0m[32mUploaded file to key: ozFpmPauHF9G2DAG8jpRdGai (checksum: rJqqGaBfCJWd0dvGXRz6nw==)[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: 5LJD64gULkz2oZdJfXiRpvL6 (checksum: s6UbARw2VjmGWeTwjj72Lg==)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments";
+DELETE FROM "active_storage_blobs";
+DELETE FROM "categories";
+DELETE FROM "favorites";
+DELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "active_storage_attachments" ("id", "name", "record_type", "record_id", "blob_id", "created_at") VALUES (1018641866, 'photo', 'Product', 236351428, 204900167, '2023-04-21 04:48:20.596282'), (568856385, 'photo', 'Product', 803818265, 111535720, '2023-04-21 04:48:20.596282'), (248204640, 'photo', 'Product', 1012971773, 510621269, '2023-04-21 04:48:20.596282');
+INSERT INTO "active_storage_blobs" ("id", "key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (204900167, '3iZAEQ6rDCRvWLwfnRtpqAHJ', 'ps4.jpg', 'image/jpeg', '{"identified":true}', 'test_fixtures', 165809, 'L591gQFeisAkzd+lxZc2tw==', '2023-04-21 04:48:20.599760'), (111535720, 'ozFpmPauHF9G2DAG8jpRdGai', 'switch.jpg', 'image/jpeg', '{"identified":true}', 'test_fixtures', 49676, 'rJqqGaBfCJWd0dvGXRz6nw==', '2023-04-21 04:48:20.599760'), (510621269, '5LJD64gULkz2oZdJfXiRpvL6', 'macbook.jpg', 'image/jpeg', '{"identified":true}', 'test_fixtures', 386367, 's6UbARw2VjmGWeTwjj72Lg==', '2023-04-21 04:48:20.599760');
+INSERT INTO "categories" ("id", "name", "created_at", "updated_at") VALUES (630261496, 'Videojuegos', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (605639025, 'Informática', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (813282444, 'Ropa', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (365370646, 'Coches', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (223486541, 'Música', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (510603358, 'Electrónica', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (169552531, 'Libros', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (1014178784, 'Móviles', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822'), (868874525, 'Deportes', '2023-04-21 04:48:20.599822', '2023-04-21 04:48:20.599822');
+INSERT INTO "favorites" ("id", "user_id", "product_id", "created_at", "updated_at") VALUES (202633413, 280205884, 803818265, '2023-04-21 04:48:20.601480', '2023-04-21 04:48:20.601480'), (930505770, 1038477724, 634106372, '2023-04-21 04:48:20.601480', '2023-04-21 04:48:20.601480');
+INSERT INTO "products" ("id", "title", "description", "price", "created_at", "updated_at", "category_id", "user_id") VALUES (236351428, 'PS4 Fat', 'PS4 en buen estado', 150, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 280205884), (803818265, 'Nintendo Switch', 'Le falla el lector de tarjeta SD', 195, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 377526890), (545190839, 'Nintendo 64 en buen estado', 'Con su caja, solo tiene algún pequeño arañazo', 190, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 1038477724), (816345223, 'Sega Megadrive', 'Funciona perfectamente, solo consola', 90, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 1038477724), (634106372, 'Driver 2 para ps1', 'Como nuevo en su caja y con instrucciones', 25, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 280205884), (957439831, 'PS5 nueva sin lector', 'A estrenar, usada solo dos veces.', 650, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 280205884), (1029727388, 'Game Boy Color', 'Con su caja. Color morada transparente.', 150, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 630261496, 377526890), (1012971773, 'Macbook Air', 'Le falla la batería', 250, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 605639025, 280205884), (255350244, 'iMac 27" 2015', 'i5 con 8gb de ram y SSD', 90, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 605639025, 1038477724), (954308001, 'Ryzen 5950x', 'Sin estrenar precintado como nuevo', 590, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 605639025, 377526890), (852787380, 'Nvidia 3090ti', 'Solo usada 3 meses la vendo porque no la uso', 1500, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 605639025, 1038477724), (668017202, '16GB Ram DDR4 3200mhz', 'Funciona perfectamente', 95, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 605639025, 377526890), (388031213, 'Renault Clio 2009', '85000km, 95cv', 4500, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 365370646, 280205884), (1029453414, 'Seat Panda clásico', 'Tan solo 90000km, 75cv. Del año 1980', 5500, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 365370646, 377526890), (762146111, 'Vinilo Michael Jackson Thriller', 'Como nuevo a estrenar', 45, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 223486541, 280205884), (586003644, 'Vinilo Queen', 'Ligeras marcas de uso de los años 80', 35, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 223486541, 1038477724), (871135750, 'Televisión LG 48 pulgadas', 'Viene con smart TV funciona perfectamente', 350, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 510603358, 377526890), (660871606, 'Lector de libros Kindle 2010', 'Tiene marcas de uso pero funciona bien', 35, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 510603358, 280205884), (455204334, 'iPod touch', 'Como nuevo a estrenar con su caja', 175, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 510603358, 377526890), (257897767, 'Colección entera de Harry Potter', 'Todos los libros de la saga. Bien cuidados!', 65, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 169552531, 1038477724), (925665542, 'El hobbit', 'Libro en buen estado', 15, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 169552531, 1038477724), (475308017, 'iPhone 13', 'Funciona correctamente.', 400, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 1014178784, 377526890), (1068639267, 'Google Pixel 4', 'Le falla la batería', 100, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 1014178784, 280205884), (858564046, 'Tabla de surf', 'Usada dos veces. Como nueva.', 125, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 868874525, 1038477724), (337674301, 'Raqueta de tenis profesional', 'Fabricada en fibra de carbono. Solo un par de arañazos', 135, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 868874525, 377526890), (736728372, 'Skateboard', 'Como nuevo con las ruedas recién cambiadas', 75, '2023-04-21 04:48:20.604644', '2023-04-21 04:48:20.604644', 868874525, 280205884);
+INSERT INTO "users" ("id", "email", "username", "password_digest", "created_at", "updated_at", "admin") VALUES (280205884, 'paco@vendelo.com', 'paco01', '$2a$05$31.Ru9ES0Y3bA179wJ5nsu1VCL58zID7oNbBY.lOGoDJosDKF4zzK', '2023-04-21 04:48:20.605814', '2023-04-21 04:48:20.605814', TRUE), (1038477724, 'maria@vendelo.com', 'maria23', '$2a$05$xCUZS24qkdOlzNDjXdYQKOb8FZ.8zUfp9dlipw0frnuVDlTNNmig.', '2023-04-21 04:48:20.605814', '2023-04-21 04:48:20.605814', DEFAULT), (377526890, 'pepe@vendelo.com', 'pepito', '$2a$05$jpfhQWSxRIi.Z3SnoLdIr.k.V8pEz/g/9xUPXkN2KbOdsEvwOYAw2', '2023-04-21 04:48:20.605814', '2023-04-21 04:48:20.605814', DEFAULT)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "favorites" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mdo $$
+  declare r record;
+BEGIN
+FOR r IN (
+  SELECT FORMAT(
+    'UPDATE pg_constraint SET convalidated=false WHERE conname = ''%I'' AND connamespace::regnamespace = ''%I''::regnamespace; ALTER TABLE %I.%I VALIDATE CONSTRAINT %I;',
+    constraint_name,
+    table_schema,
+    table_schema,
+    table_name,
+    constraint_name
+  ) AS constraint_check
+  FROM information_schema.table_constraints WHERE constraint_type = 'FOREIGN KEY'
+)
+  LOOP
+    EXECUTE (r.constraint_check);
+  END LOOP;
+END;
+$$;
+[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------
+Authentication::UsersControllerTest: test_should_create_user
+------------------------------------------------------------
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/register" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"juan@vendelo.com", "username"=>"juan09", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "juan@vendelo.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "juan09"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "juan@vendelo.com"], ["username", "juan09"], ["password_digest", "[FILTERED]"], ["created_at", "2023-04-21 04:48:20.771067"], ["updated_at", "2023-04-21 04:48:20.771067"], ["admin", false]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms | Allocations: 21527)
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+Authentication::UsersControllerTest: test_should_get_new
+--------------------------------------------------------
+Started GET "/register" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authentication/users/new.html.erb within layouts/application
+  Rendered authentication/users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3256)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 284)
+  Rendered shared/_items.html.erb (Duration: 1.4ms | Allocations: 1269)
+  Rendered shared/_items.html.erb (Duration: 0.2ms | Allocations: 225)
+  Rendered shared/_header.html.erb (Duration: 2.7ms | Allocations: 2671)
+  Rendered layout layouts/application.html.erb (Duration: 141.1ms | Allocations: 101434)
+Completed 200 OK in 146ms (Views: 143.4ms | ActiveRecord: 0.0ms | Allocations: 104842)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 964)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+Started GET "/categories/new" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.5ms | Allocations: 954)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1390)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 557)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 5967)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 7968)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+CategoriesControllerTest: test_should_create_category
+-----------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 631)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+  [1m[36mCategory Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"Ropa"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ropa"], ["created_at", "2023-04-21 04:48:20.972892"], ["updated_at", "2023-04-21 04:48:20.972892"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 1259)
+  [1m[36mCategory Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_edit
+----------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 486)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+Started GET "/categories/813282444/edit" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"813282444"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.4ms | Allocations: 581)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 866)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 490)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1695)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 5205)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 6125)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+CategoriesControllerTest: test_should_get_index
+-----------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:20 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+Started GET "/categories" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered collection of categories/_category.html.erb [9 times] (Duration: 1.6ms | Allocations: 1550)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2136)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered shared/_items.html.erb (Duration: 0.6ms | Allocations: 490)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.3ms | Allocations: 1695)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 6477)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 7223)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+CategoriesControllerTest: test_should_update_category
+-----------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 486)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+Started PATCH "/categories/813282444" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"name"=>"Ropa"}, "id"=>"813282444"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+Redirected to http://www.example.com/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 913)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CategoriesControllerTest: test_should_destroy_category
+------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 486)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+  [1m[36mCategory Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started DELETE "/categories/813282444" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"id"=>"813282444"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 813282444], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."category_id" = $1 LIMIT $2[0m  [["category_id", 813282444], ["LIMIT", 1]]
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 813282444]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms | Allocations: 5380)
+  [1m[36mCategory Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ProductsControllerTest: test_render_a_list_of_products
+------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 562)
+Started GET "/" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 236351428], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 816345223], ["record_id", 634106372], ["record_id", 957439831], ["record_id", 1029727388], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202], ["record_id", 388031213]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.9ms | Allocations: 876)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 3.4ms | Allocations: 4732)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 8160)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 522)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1736)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12605)
+Completed 200 OK in 39ms (Views: 11.6ms | ActiveRecord: 1.6ms | Allocations: 50465)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+ProductsControllerTest: test_render_an_edit_product_form
+--------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 627)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+Started GET "/236351428/edit" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered products/_form.html.erb (Duration: 4.6ms | Allocations: 3532)
+  Rendered products/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3858)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 519)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.3ms | Allocations: 1745)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 8385)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 9541)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ProductsControllerTest: test_render_a_new_product_form
+------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 634)
+Started GET "/new" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 1883)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2108)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 490)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1697)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 6448)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 7212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+ProductsControllerTest: test_allows_to_create_a_new_product
+-----------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 630261496], ["LIMIT", 1]]
+Started POST "/" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Nintendo 64", "description"=>"Le faltan los cables", "price"=>"45", "category_id"=>"630261496"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 630261496], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Nintendo 64"], ["description", "Le faltan los cables"], ["price", 45], ["created_at", "2023-04-21 04:48:21.142466"], ["updated_at", "2023-04-21 04:48:21.142466"], ["category_id", 630261496], ["user_id", 280205884]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 2020)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+ProductsControllerTest: test_render_a_detailed_product_page
+-----------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 486)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+Started GET "/236351428" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 236351428], ["user_id", 280205884], ["LIMIT", 1]]
+  Rendered products/_favorite.html.erb (Duration: 1.4ms | Allocations: 914)
+  Rendered products/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3238)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 501)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1720)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 7650)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 8417)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ProductsControllerTest: test_can_delete_products
+------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mProduct Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+Started DELETE "/236351428" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1[0m  [["product_id", 236351428]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 236351428], ["record_type", "Product"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1018641866]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 236351428]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 204900167], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 2ce3768f-1fab-4407-8659-7796ed12b11f) to Test(default) with arguments: #<GlobalID:0x000055bfa6aaae90 @uri=#<URI::GID gid://vendelo/ActiveStorage::Blob/204900167>>
+Redirected to http://www.example.com/
+Completed 303 See Other in 7ms (ActiveRecord: 1.0ms | Allocations: 3038)
+  [1m[36mProduct Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------------------------
+ProductsControllerTest: test_does_not_allow_to_update_a_product_with_an_invalid_field
+-------------------------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 592)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+Started PATCH "/236351428" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"price"=>nil}, "id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 630261496], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered products/_form.html.erb (Duration: 3.6ms | Allocations: 3016)
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3088)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered shared/_items.html.erb (Duration: 0.6ms | Allocations: 514)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 7584)
+Completed 422 Unprocessable Entity in 12ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 9212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------------
+ProductsControllerTest: test_render_a_list_of_products_filtered_by_category
+---------------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 605639025], ["LIMIT", 1]]
+Started GET "/?category_id=605639025" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"605639025"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1 ORDER BY created_at DESC[0m  [["category_id", 605639025]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["category_id", 605639025], ["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 1012971773], ["record_id", 255350244], ["record_id", 954308001], ["record_id", 852787380], ["record_id", 668017202]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 510621269]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.9ms | Allocations: 661)
+  Rendered collection of products/_product.html.erb [5 times] (Duration: 1.5ms | Allocations: 1813)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3526)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 501)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1715)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 7913)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 10290)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------
+ProductsControllerTest: test_sort_products_by_cheapest_prices_first
+-------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+Started GET "/?order_by=cheapest" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"order_by"=>"cheapest"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY price ASC[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY price ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 925665542], ["record_id", 634106372], ["record_id", 586003644], ["record_id", 660871606], ["record_id", 762146111], ["record_id", 257897767], ["record_id", 736728372], ["record_id", 816345223], ["record_id", 255350244], ["record_id", 668017202], ["record_id", 1068639267], ["record_id", 858564046], ["record_id", 337674301]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.6ms | Allocations: 658)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 2.5ms | Allocations: 4457)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 6257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 490)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1695)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 10584)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 12882)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------------------------
+ProductsControllerTest: test_does_not_allow_to_create_a_new_product_with_empty_fields
+-------------------------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 486)
+Started POST "/" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"Le faltan los cables", "price"=>"45"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered products/_form.html.erb (Duration: 3.9ms | Allocations: 3275)
+  Rendered products/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3334)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 501)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.3ms | Allocations: 1731)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 7760)
+Completed 422 Unprocessable Entity in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 8683)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------------------
+ProductsControllerTest: test_render_a_list_of_products_filtered_by_min_price_and_max_price
+------------------------------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 486)
+Started GET "/?max_price=200&min_price=160" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"max_price"=>"200", "min_price"=>"160"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price >= '160') AND (price <= '200') ORDER BY created_at DESC[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price >= '160') AND (price <= '200') ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 455204334]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 111535720]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.7ms | Allocations: 658)
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 1.1ms | Allocations: 1059)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2766)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_items.html.erb (Duration: 0.5ms | Allocations: 501)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 1715)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 7153)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.9ms | Allocations: 9454)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+ProductsControllerTest: test_search_a_product_by_query_text
+-----------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+Started GET "/?query_text=Switch" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"query_text"=>"Switch"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((setweight(to_tsvector('simple', coalesce("products"."title"::text, '')), 'A') || setweight(to_tsvector('simple', coalesce("products"."description"::text, '')), 'B')), (to_tsquery('simple', ''' ' || 'Switch' || ' ''')), 0)) AS rank FROM "products" WHERE ((setweight(to_tsvector('simple', coalesce("products"."title"::text, '')), 'A') || setweight(to_tsvector('simple', coalesce("products"."description"::text, '')), 'B')) @@ (to_tsquery('simple', ''' ' || 'Switch' || ' ''')))) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC, created_at DESC[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((setweight(to_tsvector('simple', coalesce("products"."title"::text, '')), 'A') || setweight(to_tsvector('simple', coalesce("products"."description"::text, '')), 'B')), (to_tsquery('simple', ''' ' || 'Switch' || ' ''')), 0)) AS rank FROM "products" WHERE ((setweight(to_tsvector('simple', coalesce("products"."title"::text, '')), 'A') || setweight(to_tsvector('simple', coalesce("products"."description"::text, '')), 'B')) @@ (to_tsquery('simple', ''' ' || 'Switch' || ' ''')))) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC, created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 803818265]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 111535720]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.6ms | Allocations: 671)
+  Rendered collection of products/_product.html.erb [1 times] (Duration: 0.5ms | Allocations: 318)
+  Rendered products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2120)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered shared/_items.html.erb (Duration: 0.5ms | Allocations: 518)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.3ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 6626)
+Completed 200 OK in 18ms (Views: 5.9ms | ActiveRecord: 4.4ms | Allocations: 11363)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------
+ProductsControllerTest: test_sort_products_by_expensive_prices_first
+--------------------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 555)
+Started GET "/?order_by=expensive" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#index as HTML
+  Parameters: {"order_by"=>"expensive"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY price DESC[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY price DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 13], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" IN ($3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)[0m  [["record_type", "Product"], ["name", "photo"], ["record_id", 1029453414], ["record_id", 388031213], ["record_id", 852787380], ["record_id", 957439831], ["record_id", 954308001], ["record_id", 475308017], ["record_id", 871135750], ["record_id", 1012971773], ["record_id", 803818265], ["record_id", 545190839], ["record_id", 455204334], ["record_id", 236351428], ["record_id", 1029727388]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 204900167], ["id", 111535720], ["id", 510621269]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered collection of products/_category.html.erb [9 times] (Duration: 0.7ms | Allocations: 658)
+  Rendered collection of products/_product.html.erb [12 times] (Duration: 2.8ms | Allocations: 4146)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 5948)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_items.html.erb (Duration: 0.5ms | Allocations: 501)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 1715)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 10334)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.8ms | Allocations: 13109)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+ProductsControllerTest: test_allows_to_update_a_product
+-------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+Started PATCH "/236351428" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"price"=>"165"}, "id"=>"236351428"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 236351428], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 630261496], ["LIMIT", 1]]
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", 165], ["updated_at", "2023-04-21 04:48:21.351453"], ["id", 236351428]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1781)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------
+Authentication::SessionsControllerTest: test_should_get_new
+-----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authentication/sessions/new.html.erb within layouts/application
+  Rendered authentication/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 899)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_items.html.erb (Duration: 0.2ms | Allocations: 250)
+  Rendered shared/_items.html.erb (Duration: 0.2ms | Allocations: 223)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 1218)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4917)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5929)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------------
+Authentication::SessionsControllerTest: test_should_login_an_user_by_username
+-----------------------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco01", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco01' OR username = 'paco01') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 554)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+Authentication::SessionsControllerTest: test_should_logout
+----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 486)
+Started DELETE "/login/280205884" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#destroy as HTML
+  Parameters: {"id"=>"280205884"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 492)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+Authentication::SessionsControllerTest: test_should_login_an_user_by_email
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 486)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+UsersControllerTest: test_should_get_show
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+Started GET "/user/paco01" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"paco01"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paco01"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 307)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_items.html.erb (Duration: 0.2ms | Allocations: 254)
+  Rendered shared/_items.html.erb (Duration: 0.2ms | Allocations: 223)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 1232)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4347)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 5883)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+FavoritesControllerTest: test_should_create_favorite
+----------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 630)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 816345223], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  [1m[36mFavorite Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites"[0m
+Started POST "/favorites?product_id=816345223" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by FavoritesController#create as HTML
+  Parameters: {"product_id"=>"816345223"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 816345223], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFavorite Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 280205884], ["product_id", 816345223], ["LIMIT", 1]]
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 280205884], ["product_id", 816345223], ["created_at", "2023-04-21 04:48:21.427081"], ["updated_at", "2023-04-21 04:48:21.427081"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/816345223
+Completed 302 Found in 12ms (ActiveRecord: 1.0ms | Allocations: 15601)
+  [1m[36mFavorite Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+FavoritesControllerTest: test_should_unfavorite
+-----------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 532)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 816345223], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  [1m[36mFavorite Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites"[0m
+Started DELETE "/favorites/803818265" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by FavoritesController#destroy as HTML
+  Parameters: {"product_id"=>"803818265"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."product_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["product_id", 803818265], ["user_id", 280205884], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFavorite Destroy (0.1ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 202633413]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/803818265
+Completed 303 See Other in 3ms (ActiveRecord: 0.5ms | Allocations: 1208)
+  [1m[36mFavorite Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+FavoritesControllerTest: test_should_return_my_favorites
+--------------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by Authentication::SessionsController#create as HTML
+  Parameters: {"login"=>"paco@vendelo.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email = 'paco@vendelo.com' OR username = 'paco@vendelo.com') LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 486)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 816345223], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 803818265], ["LIMIT", 1]]
+Started GET "/favorites" for 127.0.0.1 at 2023-04-20 23:48:21 -0500
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 280205884], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 364)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered shared/_items.html.erb (Duration: 0.4ms | Allocations: 529)
+  Rendered shared/_items.html.erb (Duration: 0.3ms | Allocations: 484)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 4936)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 6182)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
