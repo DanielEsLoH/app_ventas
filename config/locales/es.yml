@@ -93,3 +93,7 @@ es:
   favorites:
     index:
       title: 'Mis favoritos'
+  user_mailer:
+    welcome:
+      subject: 'Bienvenido a TuVenta'
+      welcome_message: 'Hola %{username}, bienvenido a TuVenta. ¡Esperamos que vendas un montón!'

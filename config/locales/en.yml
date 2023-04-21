@@ -93,3 +93,7 @@ en:
     favorites:
       index:
         title: 'My favorites'
+  user_mailer:
+    welcome:
+      subject: 'Welcome to YourSale'
+      welcome_message: 'Hey %{username}, welcome to YourSale. We hope you sell a lot!'
