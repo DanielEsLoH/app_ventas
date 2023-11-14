@@ -1,26 +1,31 @@
-<%= form_with(model: @user) do |form| %>
-  <% @user.errors.full_messages.each do |error| %>
-    <div>
-      <%= error %>
-    </div>
-  <% end %>
+<section class="flex flex-col items-center">
+  <div class="border-2 p-36 mt-14 rounded-lg bg-teal-500">
+    <h2 class="text-center font-bold text-2xl text-white">Registrarse</h2>
+    <%= form_with(model: @user) do |form| %>
+      <% @user.errors.full_messages.each do |error| %>
+        <div>
+          <%= error %>
+        </div>
+      <% end %>
 
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email, required: true %>
-  </div>
+      <div class="flex flex-col">
+        <%= form.label :email, class: 'text-center justify-center p-4 mt-2 font-bold text-white' %>
+        <%= form.email_field :email, required: true, class: 'rounded-lg p-2 text-sm font-semibold mt-2' %>
+      </div>
 
-  <div>
-    <%= form.label :username %>
-    <%= form.text_field :username, required: true %>
-  </div>
+      <div class="flex flex-col">
+        <%= form.label :username, class: 'text-center justify-center p-4 mt-2 font-bold text-white' %>
+        <%= form.text_field :username, required: true, class: 'rounded-lg p-2 text-sm font-semibold mt-2' %>
+      </div>
 
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password, required: true %>
-  </div>
+      <div class="flex flex-col">
+        <%= form.label :password, class: 'text-center justify-center p-4 mt-2 font-bold text-white' %>
+        <%= form.password_field :password, required: true, class: 'rounded-lg p-2 text-sm font-semibold mt-2' %>
+      </div>
 
-  <div>
-    <%= form.submit %>
+      <div class="mt-5 flex justify-center">
+        <%= form.submit "Resgistrate", class: 'items-center text-center bg-blue-500 p-2 rounded-lg font-semibold text-white' %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</section>

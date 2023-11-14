@@ -1,3 +1,10 @@
 ps4_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "ps4.jpg", service_name: "test_fixtures" %>
 switch_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "switch.jpg", service_name: "test_fixtures" %>
+n64_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "n64.png", service_name: "test_fixtures" %>
 air_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "macbook.jpg", service_name: "test_fixtures" %>
+gameboy_color_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "gameboy_color.jpg", service_name: "test_fixtures" %>
+imac_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "imac.jpg", service_name: "test_fixtures" %>
+ps5_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "ps5.jpg", service_name: "test_fixtures" %>
+ryzen_picture_blob: <%= ActiveStorage::FixtureSet.blob filename: "ryzen.jpg", service_name: "test_fixtures" %>
+
+

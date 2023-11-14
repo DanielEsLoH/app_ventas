@@ -1,15 +1,20 @@
-<%= form_with(url: sessions_path) do |form| %>
-  <div>
-    <%= form.label :login %>
-    <%= form.text_field :login, required: true %>
-  </div>
+<section class="flex flex-col items-center">
+  <div class="border-2 p-36 mt-14 rounded-lg bg-teal-500">
+    <h2 class="text-center font-bold text-2xl text-white">Inicio de Sesión</h2>
+    <%= form_with(url: sessions_path) do |form| %>
+      <div class="flex flex-col">
+        <%= form.label :login, "Email", class: 'text-center justify-center p-4 mt-2 font-bold text-white' %>
+        <%= form.text_field :login, required: true, class: 'rounded-lg p-2 text-sm font-semibold mt-2', placeholder: 'example@example.com' %>
+      </div>
 
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password, required: true %>
-  </div>
+      <div class="flex flex-col">
+        <%= form.label :password, "Contraseña", class: 'text-center justify-center p-4 mt-2 font-bold text-white' %>
+        <%= form.password_field :password, required: true, class: 'rounded-lg p-2 text-sm font-semibold mt-2', placeholder: '******' %>
+      </div>
 
-  <div>
-    <%= form.submit %>
+      <div class="mt-5 flex justify-center">
+        <%= form.submit "Iniciar Sesión", class: 'items-center text-center bg-blue-500 p-2 rounded-lg font-semibold text-white' %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</section>

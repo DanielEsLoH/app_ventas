@@ -8,7 +8,32 @@ switch_picture:
   record: switch (Product)
   blob: switch_picture_blob
 
+nintendo64_picture: 
+  name: photo
+  record: nintendo64 (Product)
+  blob: n64_picture_blob
+
 air_picture:
   name: photo
   record: air (Product)
-  blob: air_picture_blob 
+  blob: air_picture_blob
+
+gameboy_picture:
+  name: photo
+  record: gameboy (Product)
+  blob: gameboy_color_picture_blob
+
+imac_picture: 
+  name: photo
+  record: imac (Product)
+  blob: imac_picture_blob
+
+ps5_picture: 
+  name: photo
+  record: ps5 (Product)
+  blob: ps5_picture_blob
+
+ryzen_picture: 
+  name: photo
+  record: ryzen (Product)
+  blob: ryzen_picture_blob
